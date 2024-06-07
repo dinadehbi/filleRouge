@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        *::-webkit-scrollbar{
+            width: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section{
+            width: 100vw;
+            height: 40vw;
+            background-color: aqua;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+        .div1{
+            display: flex;
+            width: 20%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .div1 h1{
+            color: #156B86;
+        }
+        .options{
+            background-color: #156B86;
+            height: 8vw;
+            width: 50vw;
+            border-radius: 1vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .options button{
+            height: 5vw;
+            width: 5vw;
+            font-size: 2vw;
+           
+        }
+        .notes{
+            background-color: blueviolet;
+            height: 5vw;
+            width: 100vw;
+            position: relative;
+            top: 3vw;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="div1">
+            <h1>Exercice1:</h1>
+            <i>Listen to the notes</i>
+        </div>
+        <audio controls>
+            <source src="/Notes/Do.wav" type="audio/ogg">
+        </audio>
+        <div class="options">
+            <button>Do</button>
+            <button>La</button>
+            <button>Sol</button>
+            <button>Re</button>
+
+        </div>
+          
+    </section>
+    <script>
+        
+    </script>
+
+    
+</body>
+</html>

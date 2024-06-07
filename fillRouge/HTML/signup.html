@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../CSS/inscription.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <section>
+        <form action="">
+            <div class="con1">
+                <button class="button2">                
+                    <i class="fa-solid fa-user" style="color: white;"></i>
+                    <a href="../HTML/signin.html">Sign In</a>
+                </button>
+                <button class="button1">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <p>Sign Up</p>
+                </button>  
+            </div>
+            <aside>
+                <div class="inputs">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                <br>
+                <div class="inputs">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email">
+                </div>
+                <br>
+                <div class="inputs">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password" id="password">
+                    <i class="fa-solid fa-eye-slash toggle-password" data-toggle="password"></i>
+                </div>
+                <br>
+                <div class="inputs">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <input type="password" placeholder="Confirm Password" id="confirm-password">
+                    <i class="fa-solid fa-eye-slash toggle-password" data-toggle="confirm-password"></i>
+                </div>
+                <br>
+                <button class="button2" style="width: 60%;">
+                    <a href="../HTML/signin.html">Sign In</a>
+                </button>
+                <br>
+                <div class="con3">
+                    <p>Or sign in with:</p>
+                    <i class="fa-brands fa-facebook" style="color: #156B86;"></i>
+                    <i class="fa-brands fa-google" style="color: #156B86;"></i>
+                </div>
+            </aside>
+        </form>
+    </section>
+    <script>
+        const togglePasswordIcons = document.querySelectorAll('.toggle-password');
+        
+        togglePasswordIcons.forEach(icon => {
+            icon.addEventListener('click', function () {
+                const input = document.querySelector(`#${this.getAttribute('data-toggle')}`);
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
+                this.classList.toggle('fa-eye-slash');
+                this.classList.toggle('fa-eye');
+            });
+        });
+    </script>
+</body>
+</html>
